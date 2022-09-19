@@ -1,0 +1,301 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  :root {
+         /* Primary */
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+    --Facebook-: hsl(208, 92%, 53%);
+    --Twitter-: hsl(203, 89%, 53%);
+    --Instagram-: linear-gradient(to left,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    --YouTube-: hsl(348, 97%, 39%);
+
+      /* Dark theme */
+    --Toggle-dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+    --Desaturated-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+    
+    /* light theme  */
+    --Toggle-light:hsl(230, 22%, 74%);
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+    --Grayish-Blue-Text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+
+        /* Typography */
+     --font-size-heading:14px;
+  }
+
+
+  .toggle-dark{
+    background-color: var(--Very-Dark-Blue-BG);
+  }
+
+  .toggle-dark .toggle-btn{
+     background: linear-gradient(to left, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+  }
+  
+  .toggle-dark .btn{
+    background-color:var( --Very-Dark-Blue-Top-BG-Pattern);
+    left:4%;
+  }
+  .toggle-dark .card{
+    background-color: var( --Dark-Desaturated-Blue-Card-BG);
+  }
+   
+  .toggle-dark  .heading-title ,.toggle-dark .card .number{
+    color:var(--White-Text);
+  }
+
+  .toggle-dark .card:hover{
+    background-color:hsl(228, 28%, 25%);
+  
+  }
+
+
+
+
+  
+  a {
+    text-decoration: none;
+  }
+   
+
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ /* Small */
+ @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+ .social-media-dashbord{
+    width: 100%;
+    min-height:100vh;
+    padding: 25px 0; 
+ }
+
+ .social-media-dashbord .top{
+     padding:0 0 50px 0;
+     display: flex;
+     align-items: center;
+     justify-content:space-between ;
+   }
+
+    .heading-title{
+     margin: 0;
+     color:var(--Very-Dark-Blue-Text);
+     text-transform: capitalize;
+    } 
+
+  .social-media-dashbord .top .heading .totla-followers{
+    color:var( --Grayish-Blue-Text);
+  } 
+
+  .social-media-dashbord .top .toggle-theme{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    gap: 10px;
+  }
+
+  .social-media-dashbord .top .toggle-theme .text{
+     color: var(--Grayish-Blue-Text);
+  }
+   .toggle-btn{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color:var( --Toggle-light);
+    cursor: pointer;
+ }
+ .toggle-btn:hover{
+  background-color:var( --Twitter-);
+}
+  .btn{
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  border: none;
+  outline: none;
+  border-radius:50%;
+  background-color:var(--White-BG);
+  right:4%;
+  top:10%;
+  transition: .5s;
+  cursor: pointer;
+ 
+}
+
+.social-media-dashbord  .social-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap:15px;
+   text-align: center;
+}
+.social-media-dashbord  .social-cards > div{
+  padding:20px 40px;
+  border-width: 3px;
+  border-style:solid;
+  border-radius: 6px;
+  border-right-color: transparent;
+  border-bottom-color:transparent;
+  border-left-color: transparent;
+  cursor: pointer;
+}
+
+
+.social-media-dashbord  .social-cards .facebook{
+  border-top-color:var(--Facebook-);
+ }
+ .social-media-dashbord  .social-cards .twitter{
+  border-top-color:var(--Twitter-);
+ }
+ 
+  .social-media-dashbord  .social-cards .instgram{
+  border-top-color:var(--Bright-Red);
+  
+ } 
+
+ .social-media-dashbord  .social-cards .youtube{
+  border-top-color:var(--YouTube-);
+ }
+
+ .card-heading{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap:5px;
+ }
+
+ .card-heading p{
+   color:var( --Grayish-Blue-Text);
+   font-size: 14px;
+}
+
+.number{
+  font-size: 40px;
+  color: var(--Very-Dark-Blue-Text);
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.followers{
+  text-transform: uppercase;
+  color:var( --Grayish-Blue-Text);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.card-bottom span {
+  color:var( --Lime-Green);
+  font-size: 14px;
+
+}
+
+.youtube .card-bottom span{
+  color:var(--Bright-Red)
+}
+
+.overview-today {
+  margin-top:30px;
+  
+}
+.overview-today .sub-heading{
+  color: var( --Grayish-Blue-Text);
+  margin-bottom: 20px;
+}
+
+.overview-today .cards{
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap: 15px;
+}
+
+.overview-today .cards .card {
+   padding: 20px;
+   cursor: pointer;
+
+}
+  .card:hover{
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+
+}
+.overview-today .cards .card .card-heading,.overview-today .cards .card .social-numbers{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.overview-today .cards .card .social-numbers .number{
+  font-size: 25px;
+}
+
+
+
+.overview-today .cards .card:nth-child(7) .card-bottom span
+,.overview-today .cards .card:nth-child(8) .card-bottom span
+,.overview-today .cards .card:nth-child(2) .card-bottom span{
+  color:var(--Bright-Red)
+}
+
+@media (max-width: 500px) {
+  .social-media-dashbord .top{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .heading {
+    width: 100%;
+    margin-bottom: 20px;
+   } 
+
+   
+  .heading .heading-title{
+    font-size: 20px;
+    padding: 5px 0;
+   } 
+
+
+
+ .social-media-dashbord .top .toggle-theme{
+   width: 100%;
+   justify-content:space-between ;
+   align-items: center;
+ }
+
+}
+  /* Medium */
